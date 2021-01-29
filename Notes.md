@@ -3,15 +3,15 @@
 ## Data
 - UK Biobank
 	- full cohort diagnosed with Covid-19 who were alive on 2021-01-01
-	- uses 
+	- coded using  
 - TPP
 	- GP data
 	- subset of UKB
-	- uses CTV3
+	- coded using CTV3
 - Emis
 	- GP data
 	- subset of UKB
-	- uses Read2
+	- coded using Read2
 - Lookups
 	- Diagnosis
 		- used to define patients with the autoimmune diseases and covariates of interest
@@ -84,7 +84,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 ### Raw UK Biobank assessment data
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\ukb44045.csv
 
-### CS's WD
+### SC's WD
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\SC  
 - Code Lists: 
 	- contains CTV3 and ReadV2 folders that have diagnosis / smoking status / BMI codelists (as discussed, BMI is most likely best calculated from weight)  
