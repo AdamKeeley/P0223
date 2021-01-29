@@ -3,7 +3,7 @@
 ## Data
 - UK Biobank
 	- full cohort diagnosed with Covid-19 who were alive on 2021-01-01
-	- coded using  
+	- coded using ICD-10
 - TPP
 	- GP data
 	- subset of UKB
