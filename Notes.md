@@ -10,18 +10,29 @@
 	- coded using ICD-10
 
 - Primary care (GP) data
-[Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
+Details on the structure of the GP data can be found in Section 4.4 (page 10) of [Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
+	- Emis
+		- covid19_emis_gp_clinical.txt  
+			|Table Name|Field Name |Description|Encoding|
+			|---|---|---|---|
+			|covid19_emis_gp_clinical|eid|Participant identifier |NA|
+			||event_dt|Date clinical code entered|Special codes in Data-Coding 819|
+			||code|Clinical code|SNOMED codes available from TRUD
+EMIS Local Clinical Code List DataCoding 7689|
+			||code_type|SNOMED or EMIS Local code|Data-Coding 3175|
+			||value|Value recorded |Special codes in Data-Coding 2360|
+			||unit|Unit recorded for value|Special codes in Data-Coding 1176|
+			
+		- covid19_emis_gp_scripts.txt  
+		- subset of UKB
+		- coded using Read2	
 	- TPP
-		- covid19_tpp_gp_clinical [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40101)  
-		- covid19_tpp_gp_scripts [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40102)  
+		- covid19_tpp_gp_clinical.txt 
+		- covid19_tpp_gp_scripts.txt 
 		- subset of UKB
 		- coded using CTV3
-	- Emis
-		- covid19_emis_gp_clinical [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40103)  
-		- covid19_emis_gp_scripts  [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40104)  
-		- subset of UKB
-		- coded using Read2
+
 
 - Lookups
 	- Diagnosis
