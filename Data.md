@@ -15,14 +15,15 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 ### Clinical
 - EMIS
 	- covid19_emis_gp_clinical.txt  
+		- uploaded to **P0223.dbo.covid19_emis_gp_clinical**
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_emis_gp_clinical|eid|Participant identifier |NA|
-		||event_dt|Date clinical code entered|Special codes in Data-Coding 819|
-		||code|Clinical code|SNOMED codes available from TRUD EMIS Local Clinical Code List DataCoding 7689|
-		||code_type|SNOMED or EMIS Local code|Data-Coding 3175|
-		||value|Value recorded |Special codes in Data-Coding 2360|
-		||unit|Unit recorded for value|Special codes in Data-Coding 1176|
+		||event_dt|Date clinical code entered|Special dates in tlk.special_dates (819)|
+		||code|Clinical code|SNOMED codes available from TRUD. EMIS Local Clinical Code List [DataCoding 7689](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689)|
+		||code_type|SNOMED or EMIS Local code|tlk.gp_code_type (3175)|
+		||value|Value recorded |Special values in tlk.special_values (2360)|
+		||unit|Unit recorded for value|Special codes in tlk.special_units (1176)|
 - TPP
 	- covid19_tpp_gp_clinical.txt 
 		|Table Name|Field Name |Description|Encoding|
