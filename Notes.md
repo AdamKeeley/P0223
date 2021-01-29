@@ -1,17 +1,28 @@
 # MRC CiC Auto-immune Covid-19
 
 ## Data
+
+### UK Biobank 
+[Data for COVID-19 research](https://biobank.ndph.ox.ac.uk/showcase/exinfo.cgi?src=COVID19).  
+
 - UK Biobank
 	- full cohort diagnosed with Covid-19 who were alive on 2021-01-01
 	- coded using ICD-10
-- TPP
-	- GP data
-	- subset of UKB
-	- coded using CTV3
-- Emis
-	- GP data
-	- subset of UKB
-	- coded using Read2
+
+- Primary care (GP) data
+[Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
+N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
+	- TPP
+		- covid19_tpp_gp_clinical [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40101)  
+		- covid19_tpp_gp_scripts [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40102)  
+		- subset of UKB
+		- coded using CTV3
+	- Emis
+		- covid19_emis_gp_clinical [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40103)  
+		- covid19_emis_gp_scripts  [[data sheet]](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40104)  
+		- subset of UKB
+		- coded using Read2
+
 - Lookups
 	- Diagnosis
 		- used to define patients with the autoimmune diseases and covariates of interest
