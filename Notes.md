@@ -71,11 +71,11 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\ukb44045.csv
 
 ### Crossfield's WD
-N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\SC
+N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\SC  
 	- Code Lists: 
-		- contains CTV3 and ReadV2 folders that have diagnosis / smoking status / BMI codelists (as discussed, BMI is most likely best calculated from weight)
+		- contains CTV3 and ReadV2 folders that have diagnosis / smoking status / BMI codelists (as discussed, BMI is most likely best calculated from weight)  
 	- Documents: 
-		- contains the study protocol (an evolving document, it would be good to update with detail as the analysis plan becomes clearer and update the table of diagnosis codelists when new ones are made)
+		- contains the study protocol (an evolving document, it would be good to update with detail as the analysis plan becomes clearer and update the table of diagnosis codelists when new ones are made)  
 	- Lookups:
 		- UKBB_Medication.csv 
 			- lists drug names (from Biobank) that have been identified as belonging in a group. 
@@ -92,12 +92,12 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 			– this is our study cohort
 			- it has their index date (date of covid diagnosis).
 
-We want to identify patients with autoimmune inflammatory disease (AID) and/or an immunosuppressant / DMARD drug. SC has identified these from the UKB baseline assessment data, but is hoping that by searching the GP data AK will be able to increase the cohort sizes! 
+We want to identify patients with autoimmune inflammatory disease (AID) and/or an immunosuppressant / DMARD drug. SC has identified these from the UKB baseline assessment data, but is hoping that by searching the GP data AK will be able to increase the cohort sizes!  
 
 Identified from UKB:
-		CiC..Cohort_Covid_AID 
+		- CiC..Cohort_Covid_AID  
 			- patients with Covid and an AID identified from assessment data (the AID is listed)
-		CiC.. Cohort_Covid_IS 
+		- CiC.. Cohort_Covid_IS  
 			- patients with Covid and a IS_DMARD, NonIS_DMARD or oral_GC  identified from assessment data
-		CiC.. Cohort_Covid_IS_NoAID 
+		- CiC.. Cohort_Covid_IS_NoAID  
 			- patients in the above table who do not have an AID
