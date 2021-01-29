@@ -26,6 +26,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 - TPP
 	- covid19_tpp_gp_clinical.txt 
 		|Table Name|Field Name |Description|Encoding|
+		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
 		||event_dt |Date clinical code entered |Special codes in Data-Coding 819|
 		||code |Clinical code |CTV3: Data-Coding 7128 Local TPP: Data-Coding 8708|
