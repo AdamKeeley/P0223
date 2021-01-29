@@ -11,27 +11,36 @@
 - Emis
 	- GP data
 	- subset of UKB
-	- uses 
+	- uses Read2
 - Lookups
 	- Diagnosis
 		- used to define patients with the autoimmune diseases and covariates of interest
 		- some still need code lists generating
+			- [Manchester clinical codes repository](https://clinicalcodes.rss.mhs.man.ac.uk/)
+			- Full list of all Read2 codes: N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\SC\Lookups\ReadV2_CodeDictionary
 	- Medication 
 		- single file list of terms
 		- grouped into categories
 			- IS_DMARD
 			- NonIS_DMARD
 			- Oral_GC
+			- Local_GC
 
 ## Analysis files
 Use same logic as used in P0090 - GAE where possible.
 
 - Sociodemographic and health habit 
 	- long file
-	- use whole cohort from UKB
-	- include all values captured between two years prior to extration date and date of death, de-registration, etc.
+	- use whole cohort from UKB (ie BB_Baseline44045..Demographics)
 	- Take smoking status, BMI from GP data
 	- Deprivation Index from GP practice location?
+	- criteria
+		- all values captured between two years prior to extration date and date of death, de-registration, etc.
+	- include fields 
+		- patient id
+		- diagnosis code
+		- diagnosis date
+		- indicate data source
 	- **Let team know what is in GP Registration file**
 	
 - Disease
@@ -44,9 +53,14 @@ Use same logic as used in P0090 - GAE where possible.
 		- diagnosis code
 		- diagnosis date
 		- indicate data source
+
 - Medication
 	- one file per medication group
 	- long files
+	- use 
+		- DrugTerm and UKBB_Medication files in Lookups
+		- terms listed in Table 2 of the study protocol in Documents
+		- oral GC and DMARD BNF code lists used in P0090 – GAE using CPRD data
 	- criteria 
 		- include if prescription occurs 2 years prior to extraction date
 	- include fields 
