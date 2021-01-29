@@ -70,34 +70,34 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 ### Raw UK Biobank assessment data
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\ukb44045.csv
 
-### Crossfield's WD
+### CS's WD
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\SC  
-	- Code Lists: 
-		- contains CTV3 and ReadV2 folders that have diagnosis / smoking status / BMI codelists (as discussed, BMI is most likely best calculated from weight)  
-	- Documents: 
-		- contains the study protocol (an evolving document, it would be good to update with detail as the analysis plan becomes clearer and update the table of diagnosis codelists when new ones are made)  
-	- Lookups:
-		- UKBB_Medication.csv 
-			- lists drug names (from Biobank) that have been identified as belonging in a group. 
-			- Group2 indicates the drugs that are in IS_DMARD, NonIS_DMARD and oral_GC, which are the drugs of interest.
-		- In DrugTerm.csv 
-			- UKBB_Medication stripped of all references to dosage (e.g. 10 mg) from the drug names to create a cleaner list for querying using a LIKE statement.
-	- Outputs: 
-		- files SC made for AM and MR, in case they refer to anything. 44045UKBB_Medication_V2.xlsx is the file used to make the above UKBB_Medication.csv (i.e. it contains additional researcher comments and column names that are readable e.g. have spaces in)
-	- SQL databases:
-		- CiC..StudyPopulation 
-			- all UKB patients eligible for this study
-		- AID_GC..IndexCovid 
-			- 9k UKB patients with covid-19
-			– this is our study cohort
-			- it has their index date (date of covid diagnosis).
+- Code Lists: 
+	- contains CTV3 and ReadV2 folders that have diagnosis / smoking status / BMI codelists (as discussed, BMI is most likely best calculated from weight)  
+- Documents: 
+	- contains the study protocol (an evolving document, it would be good to update with detail as the analysis plan becomes clearer and update the table of diagnosis codelists when new ones are made)  
+- Lookups:
+	- UKBB_Medication.csv 
+		- lists drug names (from Biobank) that have been identified as belonging in a group. 
+		- Group2 indicates the drugs that are in IS_DMARD, NonIS_DMARD and oral_GC, which are the drugs of interest.
+	- In DrugTerm.csv 
+		- UKBB_Medication stripped of all references to dosage (e.g. 10 mg) from the drug names to create a cleaner list for querying using a LIKE statement.
+- Outputs: 
+	- files SC made for AM and MR, in case they refer to anything. 44045UKBB_Medication_V2.xlsx is the file used to make the above UKBB_Medication.csv (i.e. it contains additional researcher comments and column names that are readable e.g. have spaces in)
+- SQL databases:
+	- CiC..StudyPopulation 
+		- all UKB patients eligible for this study
+	- AID_GC..IndexCovid 
+		- 9k UKB patients with covid-19
+		– this is our study cohort
+		- it has their index date (date of covid diagnosis).
 
 We want to identify patients with autoimmune inflammatory disease (AID) and/or an immunosuppressant / DMARD drug. SC has identified these from the UKB baseline assessment data, but is hoping that by searching the GP data AK will be able to increase the cohort sizes!  
 
-Identified from UKB:
-		- CiC..Cohort_Covid_AID  
-			- patients with Covid and an AID identified from assessment data (the AID is listed)
-		- CiC.. Cohort_Covid_IS  
-			- patients with Covid and a IS_DMARD, NonIS_DMARD or oral_GC  identified from assessment data
-		- CiC.. Cohort_Covid_IS_NoAID  
-			- patients in the above table who do not have an AID
+Identified from UKB: 
+- CiC..Cohort_Covid_AID  
+	- patients with Covid and an AID identified from assessment data (the AID is listed)
+- CiC.. Cohort_Covid_IS  
+	- patients with Covid and a IS_DMARD, NonIS_DMARD or oral_GC  identified from assessment data
+- CiC.. Cohort_Covid_IS_NoAID  
+	- patients in the above table who do not have an AID
