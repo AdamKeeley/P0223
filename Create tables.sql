@@ -1,3 +1,9 @@
+--create database P0223
+--go
+
+use P0223
+go
+
 /********************
 	DATA TABLES
 ********************/
