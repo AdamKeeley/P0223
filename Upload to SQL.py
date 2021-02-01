@@ -26,3 +26,5 @@ for chunk in pd.read_csv(file, sep='\t', chunksize=chunksize):
 	df.event_dt = pd.to_datetime(df.event_dt, utc = True)
 	engine = create_engine('mssql+pyodbc://' + SQL_server + '/' + SQL_database + '?driver=SQL Server Native Client 11.0')
 	df.to_sql(SQL_table, con = engine, if_exists = "append", schema = SQL_schema, index = False)
+df = df.iloc[0:0]
+chunk = chunk.iloc[0:0]
