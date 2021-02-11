@@ -19,7 +19,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|Table Name|Field Name|Description|Encoding|
 		|---|---|---|---|
 		|covid19_emis_gp_clinical|eid|Participant identifier |NA|
-		||event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = 819)|
+		||event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
 		||code|Clinical code|SNOMED codes available from TRUD. <br/>EMIS Local Clinical Code List: tlk.EMIS_Clinical_Code (7689)|
 		||code_type|SNOMED or EMIS Local code|tlk.gp_code_type (3175)|
 		||value|Value recorded |Special values in tlk.special_values (where code_set = 2360)|
