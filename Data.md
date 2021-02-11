@@ -3,7 +3,7 @@
 
 ## UK Biobank
 - ukb44045.csv
-- full cohort diagnosed with Covid-19 who were alive on 2021-01-01
+- full cohort diagnosed with Covid-19 who were alive on 2020-01-01
 - coded using ICD-10?
 
 ## Primary care (GP) data  
