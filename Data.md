@@ -19,31 +19,38 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|Table Name|Field Name|Description|Encoding|
 		|---|---|---|---|
 		|covid19_emis_gp_clinical|eid|Participant identifier |NA|
-		||event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
-		||code|Clinical code|SNOMED codes available from TRUD. <br/>EMIS Local: tlk.EMIS_Clinical_Code ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|
-		||code_type|SNOMED or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
-		||value|Value recorded |Special values in tlk.special_values (where code_set = [2360](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=2360))|
-		||unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = [1176](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1176))|
+		| |event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
+		| |code|Clinical code|SNOMED codes available from TRUD. <br/>EMIS Local: tlk.EMIS_clinical_codes ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|
+		| |code_type|SNOMED or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
+		| |value|Value recorded |Special values in tlk.special_values (where code_set = [2360](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=2360))|
+		| |unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = [1176](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1176))|
 - TPP
 	- covid19_tpp_gp_clinical.txt 
 	- uploaded to **P0223.dbo.covid19_tpp_gp_clinical**
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
-		||event_dt |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
-		||code |Clinical code |CTV3: tlk.CTV3_clinical_codes ([7128](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7128)) <br/>TPP Local: tlk.TPP_clinical_codes ([8708](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=8708))|
-		||code_type |CTV3 or local TPP code |tlk.gp_code_type ([3175](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
-		||value |Value recorded |Special codes in tlk.special_values (where code_set = [5702](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=5702))|
+		| |event_dt |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
+		| |code |Clinical code |CTV3: tlk.CTV3_clinical_codes ([7128](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7128)) <br/>TPP Local: tlk.TPP_clinical_codes ([8708](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=8708))|
+		| |code_type |CTV3 or local TPP code |tlk.gp_code_type ([3175](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
+		| |value |Value recorded |Special codes in tlk.special_values (where code_set = [5702](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=5702))|
 
 ### Prescription
 - EMIS
 	- covid19_emis_gp_scripts.txt  
-	- subset of UKB
-	- coded using Read2	
+		|Table Name|Field Name |Description|Encoding|
+		|---|---|---|---|
+		|covid19_emis_gp_scripts|eid |Participant identifier |NA |
+		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
+		| |code |Clinical code |dm+d codes available from TRUD <br/>tlk.EMIS_prescription_codes ([7678](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7678))|
+		| |code_type |dm+d or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
 - TPP 
 	- covid19_tpp_gp_scripts.txt 
-	- subset of UKB
-	- coded using CTV3
+		|Table Name|Field Name |Description|Encoding|
+		|---|---|---|---|
+		|covid19_tpp_gp_scripts |eid |Participant identifier |NA |
+		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819)) |
+		| |dmd_code |Clinical code |dm+d codes available from TRUD <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214) |
 	
 ### Lookups
 - Diagnosis

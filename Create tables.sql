@@ -45,8 +45,13 @@ create table dbo.covid19_tpp_gp_clinical (
 --create schema tlk
 --go
 
-create table tlk.EMIS_Clinical_Code (
-	coding varchar(500)
+create table tlk.EMIS_prescription_codes (
+	coding varchar(255)
+	, meaning varchar(max)
+	)
+
+create table tlk.EMIS_clinical_codes (
+	coding varchar(255)
 	, meaning varchar(max)
 	)
 
@@ -113,5 +118,7 @@ insert into tlk.special_values values
  (5702, -1	, 'redacted - potentially sensitive or identifying')
 ,(5702, -2	, 'redacted - rare occupation')
 
-
+insert into tlk.special_values values 
+ (4214, -1, 'No dm+d code')
+,(4214, -2, 'Mapped to multiple dm+d codes')
 
