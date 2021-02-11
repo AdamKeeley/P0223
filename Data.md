@@ -26,7 +26,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		||unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = [1176](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1176))|
 - TPP
 	- covid19_tpp_gp_clinical.txt 
-	- uploaded to **dbo.covid19_tpp_gp_clinical**
+	- uploaded to **P0223.dbo.covid19_tpp_gp_clinical**
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
