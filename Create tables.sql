@@ -7,6 +7,11 @@ go
 /********************
 	DATA TABLES
 ********************/
+create table dbo.study_withdrawals (
+	eid bigint
+	constraint PK_study_withdrawals primary key (eid)
+	)
+
 create table dbo.covid19_emis_gp_clinical (
 	eid bigint
 	, event_dt datetime
@@ -24,18 +29,21 @@ create table dbo.covid19_tpp_gp_clinical (
 	, [value] bigint
 	)
 
---create table dbo.covid19_emis_gp_scripts (
---	eid bigint
---	, issue_date datetime
---	, code 
---	, code_type
---	)
+create table dbo.covid19_emis_gp_scripts (
+	eid bigint
+	, issue_date datetime
+	, code varchar(30)
+	, code_type int
+	)
 
---create table covid19_tpp_gp_scripts (
---	eid bigint
---	, issue_date datetime
---	, dmd_code 
---	)
+alter table dbo.covid19_emis_gp_scripts
+alter column code varchar(30)
+
+create table covid19_tpp_gp_scripts (
+	eid bigint
+	, issue_date datetime
+	, dmd_code  varchar(18)
+	)
 
 
 

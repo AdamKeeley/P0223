@@ -6,6 +6,13 @@
 - full cohort diagnosed with Covid-19 who were alive on 2020-01-01
 - coded using ICD-10?
 
+## Study withdrawals
+- w24559_20210201.csv
+- uploaded to **P0223.dbo.study_withdrawals**  
+
+Anonymised IDs of participants who have requested that their data should no longer be used and any others who have withdrawn previously. 
+**Remove the corresponding records from further analyses.**
+
 ## Primary care (GP) data  
 Details on the structure of the GP data can be found in Section 4.4 (page 10) of [Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
 
@@ -26,7 +33,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		| |unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = [1176](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1176))|
 - TPP
 	- covid19_tpp_gp_clinical.txt 
-	- uploaded to **P0223.dbo.covid19_tpp_gp_clinical**
+	- uploaded to **P0223.dbo.covid19_tpp_gp_clinical** 
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
@@ -37,7 +44,8 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 
 ### Prescription
 - EMIS
-	- covid19_emis_gp_scripts.txt  
+	- covid19_emis_gp_scripts.txt 
+	- uploaded to **P0223.dbo.covid19_emis_gp_scripts** 
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_emis_gp_scripts|eid |Participant identifier |NA |
@@ -50,7 +58,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|---|---|---|---|
 		|covid19_tpp_gp_scripts |eid |Participant identifier |NA |
 		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819)) |
-		| |dmd_code |Clinical code |dm+d codes available from TRUD <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214) |
+		| |dmd_code |Clinical code |dm+d codes available from TRUD <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214)) |
 	
 ### Lookups
 - Diagnosis

@@ -9,12 +9,12 @@ import pandas as pd
 from sqlalchemy import create_engine
 import urllib
 
-path = (r'N:/Academic-Services/ISS/IRC-Data-Services/Projects/P0223 - Biobank Autoimmune Disease Covid-19/AK/')
-file = r'coding7678.tsv'
+path = (r'N:/Faculty-of-Medicine-and-Health/LIRMM/Molecular Rheumatology/GCA Molecular data/UK BioBank AID GC toxicity/UKBioBank/Data/Covid-19/')
+file = r'covid19_emis_gp_scripts.txt'
 sql_server = 'IRC-PC010'
 sql_database = 'P0223'
-sql_schema = 'tlk'
-sql_table = 'EMIS_prescription_codes'
+sql_schema = 'dbo'
+sql_table = 'covid19_emis_gp_scripts'
 chunksize = 1000000
 delimiter = '\t'
 
@@ -23,7 +23,7 @@ for chunk in pd.read_csv(path + file, sep=delimiter, chunksize=chunksize):
     df = pd.DataFrame(chunk)
     df.rename(columns=df.iloc[0])
     
-    #df.event_dt = pd.to_datetime(df.event_dt, utc = True)
+    df.issue_date = pd.to_datetime(df.issue_date, utc = True)
     
     engine = create_engine("mssql+pyodbc:///?odbc_connect=%s" % conn, fast_executemany=True)
     df.to_sql(sql_table, con = engine, if_exists = "append", schema = sql_schema, index = False)
