@@ -19,20 +19,21 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|Table Name|Field Name|Description|Encoding|
 		|---|---|---|---|
 		|covid19_emis_gp_clinical|eid|Participant identifier |NA|
-		||event_dt|Date clinical code entered|Special dates in tlk.special_dates (819)|
+		||event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = 819)|
 		||code|Clinical code|SNOMED codes available from TRUD. EMIS Local Clinical Code List [DataCoding 7689](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689)|
 		||code_type|SNOMED or EMIS Local code|tlk.gp_code_type (3175)|
-		||value|Value recorded |Special values in tlk.special_values (2360)|
-		||unit|Unit recorded for value|Special codes in tlk.special_units (1176)|
+		||value|Value recorded |Special values in tlk.special_values (where code_set = 2360)|
+		||unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = 1176)|
 - TPP
 	- covid19_tpp_gp_clinical.txt 
+	- uploaded to **[dbo].[covid19_tpp_gp_clinical]**
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
-		||event_dt |Date clinical code entered |Special codes in Data-Coding 819|
-		||code |Clinical code |CTV3: Data-Coding 7128 Local TPP: Data-Coding 8708|
-		||code_type |CTV3 or local TPP code |Data-Coding 3175|
-		||value |Value recorded |Special codes in Data-Coding 5702|
+		||event_dt |Date clinical code entered |Special dates in tlk.special_values (where code_set = 819)|
+		||code |Clinical code |CTV3: tlk.CTV3_clinical_codes (7128) Local TPP: tlk.TPP_clinical_codes (8708)|
+		||code_type |CTV3 or local TPP code |tlk.gp_code_type (3175)|
+		||value |Value recorded |Special codes in tlk.special_values (where code_set = 5702|
 
 ### Prescription
 - EMIS
