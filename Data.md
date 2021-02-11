@@ -31,7 +31,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|---|---|---|---|
 		|covid19_tpp_gp_clinical|eid|Participant identifier|NA|
 		||event_dt |Date clinical code entered |Special dates in tlk.special_values (where code_set = 819)|
-		||code |Clinical code |CTV3: \t tlk.CTV3_clinical_codes (7128) <br/>Local TPP: \t tlk.TPP_clinical_codes (8708)|
+		||code |Clinical code |CTV3: tlk.CTV3_clinical_codes (7128) <br/>Local TPP: tlk.TPP_clinical_codes (8708)|
 		||code_type |CTV3 or local TPP code |tlk.gp_code_type (3175)|
 		||value |Value recorded |Special codes in tlk.special_values (where code_set = 5702|
 
