@@ -54,6 +54,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		| |code_type |dm+d or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
 - TPP 
 	- covid19_tpp_gp_scripts.txt 
+	- uploaded to **P0223.dbo.covid19_tpp_gp_scripts** 
 		|Table Name|Field Name |Description|Encoding|
 		|---|---|---|---|
 		|covid19_tpp_gp_scripts |eid |Participant identifier |NA |
