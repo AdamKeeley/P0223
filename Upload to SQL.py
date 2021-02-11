@@ -10,11 +10,11 @@ from sqlalchemy import create_engine
 import urllib
 
 path = (r'N:/Faculty-of-Medicine-and-Health/LIRMM/Molecular Rheumatology/GCA Molecular data/UK BioBank AID GC toxicity/UKBioBank/Data/Covid-19/')
-file = r'covid19_emis_gp_scripts.txt'
+file = r'covid19_tpp_gp_scripts.txt'
 sql_server = 'IRC-PC010'
 sql_database = 'P0223'
 sql_schema = 'dbo'
-sql_table = 'covid19_emis_gp_scripts'
+sql_table = 'covid19_tpp_gp_scripts'
 chunksize = 1000000
 delimiter = '\t'
 

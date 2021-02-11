@@ -36,10 +36,7 @@ create table dbo.covid19_emis_gp_scripts (
 	, code_type int
 	)
 
-alter table dbo.covid19_emis_gp_scripts
-alter column code varchar(30)
-
-create table covid19_tpp_gp_scripts (
+create table dbo.covid19_tpp_gp_scripts (
 	eid bigint
 	, issue_date datetime
 	, dmd_code  varchar(18)
