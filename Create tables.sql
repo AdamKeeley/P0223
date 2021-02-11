@@ -45,6 +45,11 @@ create table dbo.covid19_tpp_gp_clinical (
 --create schema tlk
 --go
 
+create table tlk.EMIS_Clinical_Code (
+	coding varchar(500)
+	, meaning varchar(max)
+	)
+
 create table tlk.CTV3_clinical_codes (
 	coding varchar(5)
 	, meaning varchar(max)
