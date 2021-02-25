@@ -4,7 +4,7 @@
 ## UK Biobank
 - ukb44045.csv
 - full cohort diagnosed with Covid-19 who were alive on 2020-01-01
-- coded using ICD-10?
+
 
 ## Study withdrawals
 - w24559_20210201.csv
@@ -18,6 +18,13 @@ Details on the structure of the GP data can be found in Section 4.4 (page 10) of
 
 Currently stored on N: here:  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
+
+- coded using combination of 
+	- SNOMED (available from TRUD)
+	- dm+d (available from TRUD)
+	- EMIS Local (available from UKB)
+	- CTV3 (available from UKB)
+	- TPP Local (available from UKB)
 
 ### Clinical
 - EMIS
