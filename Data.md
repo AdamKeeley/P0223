@@ -19,19 +19,13 @@ Details on the structure of the GP data can be found in Section 4.4 (page 10) of
 Currently stored on N: here:  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
 
-Coded using combination of 
-- SNOMED (available from TRUD)
-- dm+d (available from TRUD)
-- EMIS Local (available from UKB)
-- CTV3 (available from UKB)
-- TPP Local (available from UKB)
-
-|Code type|Used in|Availabel from|Uploaded to|
+### Codes used   
+|Code type|Used in|Available from|Uploaded to|
 |---|---|---|---|
 |SNOMED |covid19_emis_gp_clinical|TRUD|	|
 |dm+d |covid19_emis_gp_scripts|TRUD|	|
 ||covid19_tpp_gp_scripts|TRUD|	|
-|CTV3 |covid19_tpp_gp_clinical|UKB|O0223.tlk.CTV3_clinical_codes|
+|CTV3 |covid19_tpp_gp_clinical|UKB|P0223.tlk.CTV3_clinical_codes|
 |EMIS Clinical|covid19_emis_gp_clinical|UKB|P0223.tlk.EMIS_clinical_codes|
 |EMIS Prescription |covid19_emis_gp_scripts|UKB|P0223.tlk.EMIS_prescription_codes|
 |TPP Clinical |covid19_tpp_gp_clinical|UKB|P0223.tlk.TPP_clinical_codes|
