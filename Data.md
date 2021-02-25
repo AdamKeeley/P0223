@@ -26,6 +26,17 @@ Coded using combination of
 - CTV3 (available from UKB)
 - TPP Local (available from UKB)
 
+|Code type|Used in|Availabel from|Uploaded to|
+|---|---|---|---|
+|SNOMED |covid19_emis_gp_clinical|TRUD|	|
+|dm+d |covid19_emis_gp_scripts|TRUD|	|
+||covid19_tpp_gp_scripts|TRUD|	|
+|CTV3 |covid19_tpp_gp_clinical|UKB|O0223.tlk.CTV3_clinical_codes|
+|EMIS Clinical|covid19_emis_gp_clinical|UKB|P0223.tlk.EMIS_clinical_codes|
+|EMIS Prescription |covid19_emis_gp_scripts|UKB|P0223.tlk.EMIS_prescription_codes|
+|TPP Clinical |covid19_tpp_gp_clinical|UKB|P0223.tlk.TPP_clinical_codes|
+
+
 ### Clinical
 - EMIS
 	- covid19_emis_gp_clinical.txt  
