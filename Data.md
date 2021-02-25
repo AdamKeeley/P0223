@@ -11,7 +11,7 @@
 - uploaded to **P0223.dbo.study_withdrawals**  
 
 Anonymised IDs of participants who have requested that their data should no longer be used and any others who have withdrawn previously. 
-**Remove the corresponding records from further analyses.**
+**Corresponding records have been removed from source data and therefore excluded from further analyses.**
 
 ## Primary care (GP) data  
 Details on the structure of the GP data can be found in Section 4.4 (page 10) of [Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
