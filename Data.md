@@ -25,10 +25,10 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 |SNOMED |covid19_emis_gp_clinical|TRUD|	|
 |dm+d |covid19_emis_gp_scripts|TRUD|	|
 ||covid19_tpp_gp_scripts|TRUD|	|
-|CTV3 |covid19_tpp_gp_clinical|UKB|P0223.tlk.CTV3_clinical_codes|
-|EMIS Clinical|covid19_emis_gp_clinical|UKB|P0223.tlk.EMIS_clinical_codes|
-|EMIS Prescription |covid19_emis_gp_scripts|UKB|P0223.tlk.EMIS_prescription_codes|
-|TPP Clinical |covid19_tpp_gp_clinical|UKB|P0223.tlk.TPP_clinical_codes|
+|CTV3 |covid19_tpp_gp_clinical|UKB ([7128](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7128))|P0223.tlk.CTV3_clinical_codes|
+|EMIS Clinical|covid19_emis_gp_clinical|UKB ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|P0223.tlk.EMIS_clinical_codes|
+|EMIS Prescription |covid19_emis_gp_scripts|UKB ([7678](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7678))|P0223.tlk.EMIS_prescription_codes|
+|TPP Clinical |covid19_tpp_gp_clinical|UKB ([8708](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=8708))|P0223.tlk.TPP_clinical_codes|
 
 
 ### Clinical
