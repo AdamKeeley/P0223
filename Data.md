@@ -5,21 +5,13 @@
 - ukb44045.csv
 - full cohort diagnosed with Covid-19 who were alive on 2020-01-01
 
-
-## Study withdrawals
-- w24559_20210201.csv
-- uploaded to **P0223.dbo.study_withdrawals**  
-
-Anonymised IDs of participants who have requested that their data should no longer be used and any others who have withdrawn previously. 
-**Corresponding records have been removed from source data and therefore excluded from further analyses.**
-
 ## Primary care (GP) data  
 Details on the structure of the GP data can be found in Section 4.4 (page 10) of [Resource 3151](https://biobank.ndph.ox.ac.uk/showcase/showcase/docs/gp4covid19.pdf).  
 
 Currently stored on N: here:  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
 
-|file						|patient count	|record count	|redacted records
+|File						|Patient count	|Record count	|Redacted records
 |---						|--:			|--:			|--:
 |covid19_emis_gp_clinical	|229,075		|254,140,571	|229,075
 |covid19_tpp_gp_clinical	|189,559		|137,316,962	|177,297
@@ -77,7 +69,15 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|covid19_tpp_gp_scripts |eid |Participant identifier |NA |
 		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819)) |
 		| |dmd_code |Clinical code |dm+d: tlk.dmdd_amp, tlk.dmdd_vmp <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214)) |
-	
+
+## Study withdrawals
+- w24559_20210201.csv
+- uploaded to **P0223.dbo.study_withdrawals**  
+
+Anonymised IDs of participants who have requested that their data should no longer be used and any others who have withdrawn previously. 
+**Corresponding records have been removed from source data and therefore excluded from further analyses.**
+131 patients withdrew as of 2021-02-01
+
 ### Lookups
 - Diagnosis
 	- used to define patients with the autoimmune diseases and covariates of interest
