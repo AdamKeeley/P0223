@@ -7,6 +7,12 @@ Created a view that de-normalises the data into human readable format
 
 Need to understand how SNOMED works, and how it all fits in with what code lists already exists.
 
+|code_type	|meaning|
+|---|---|
+|2	|SNOMED CT|
+|3	|Local EMIS code|
+|5	|EMIS online test request code (OLTR)|
+
 Is as the following so far:
 ```SQL
 use P0223
@@ -21,11 +27,11 @@ SELECT [eid]
 		else format([event_dt], 'yyyy-MM-dd') end as [event_dt]
 	, [code]
 	, ct.[meaning] as code_type
-	, case when code_type = 2 then '?' --snomed.description			--coding	meaning
-		when code_type in (3, 5) then emis.meaning					--2			SNOMED CT
-		end as code_desc											--3			Local EMIS code
-	, case when sp_va.coding is not null							--5			EMIS online test request code (OLTR)
-		then sp_va.meaning	
+	, case when code_type = 2 then '?' --snomed.description
+		when code_type in (3, 5) then emis.meaning
+		end as code_desc
+	, case when sp_va.coding is not null
+		then sp_va.meaning 
 		else cast([value] as varchar(255)) end as [value]
 	, case when sp_un.coding is not null 
 		then sp_un.meaning
