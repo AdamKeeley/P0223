@@ -24,7 +24,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 |covid19_emis_gp_clinical	|229,075		|254,140,571	|229,075
 |covid19_tpp_gp_clinical	|189,559		|137,316,962	|177,297
 |covid19_emis_gp_scripts	|242,397		|79,951,610		|26,455
-|covid19_tpp_gp_scripts		|184,603		|63,420,006		|
+|covid19_tpp_gp_scripts		|184,603		|63,420,006		|n/a
 
 ### Codes used   
 |Code type|Used in|Available from|Uploaded to|
