@@ -19,6 +19,13 @@ Details on the structure of the GP data can be found in Section 4.4 (page 10) of
 Currently stored on N: here:  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
 
+|file						|patient count	|record count	|redacted records
+|---						|--:			|--:			|--:
+|covid19_emis_gp_clinical	|229,075		|254,140,571	|229,075
+|covid19_tpp_gp_clinical	|189,559		|137,316,962	|177,297
+|covid19_emis_gp_scripts	|242,397		|79,951,610		|26,455
+|covid19_tpp_gp_scripts		|184,603		|63,420,006		|
+
 ### Codes used   
 |Code type|Used in|Available from|Uploaded to|
 |---|---|---|---|
@@ -28,7 +35,6 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 |EMIS Clinical|covid19_emis_gp_clinical|UKB ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|P0223.tlk.EMIS_clinical_codes|
 |EMIS Prescription |covid19_emis_gp_scripts|UKB ([7678](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7678))|P0223.tlk.EMIS_prescription_codes|
 |TPP Clinical |covid19_tpp_gp_clinical|UKB ([8708](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=8708))|P0223.tlk.TPP_clinical_codes|
-
 
 ### Clinical
 - EMIS

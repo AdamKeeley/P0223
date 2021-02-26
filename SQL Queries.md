@@ -1,6 +1,6 @@
 # SQL Queries
 
-Will probably want to exclude all records with the following code_type:
+Exclude all records with the following code_type:
 |coding	|meaning											|
 |---	|---                                                |
 |-99	|redacted - missing                                 |
@@ -9,11 +9,11 @@ Will probably want to exclude all records with the following code_type:
 |-2		|redacted - rare occupation                         |
 |-1		|redacted - potentially sensitive or identifying    |
 
-
 ## Clinical (EMIS)
 
-Created a view that de-normalises the data into human readable format 
-- dbo.vw_covid19_emis_gp_clinical
+Created a view that de-normalises the data into human readable format, **dbo.vw_covid19_emis_gp_clinical**.
+Can then just inner join code lists to view when generating analysis files.
+Data volume might require that the result set of the view be written to a table however.
 
 Need to understand how SNOMED works, and how it all fits in with what code lists already exists.
 
@@ -57,7 +57,6 @@ FROM [P0223].[dbo].[covid19_emis_gp_clinical] cl
 	left join (
 		select * from [tlk].[special_values] where code_set = 1176) sp_un
 		on cl.[unit] = sp_un.coding
-	/*
-	CODE LISTS GO HERE
-	*/
+
+where cl.code_type not in (-99, -4, -3, -2, -1)
 ```
