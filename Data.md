@@ -11,12 +11,12 @@ Details on the structure of the GP data can be found in Section 4.4 (page 10) of
 Currently stored on N: here:  
 N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular data\UK BioBank AID GC toxicity\UKBioBank\Data\Covid-19  
 
-|File						|Patient count	|Record count	|Redacted records
-|---						|--:			|--:			|--:
-|covid19_emis_gp_clinical	|229,075		|254,140,571	|229,075
-|covid19_tpp_gp_clinical	|189,559		|137,316,962	|177,297
-|covid19_emis_gp_scripts	|242,397		|79,951,610		|26,455
-|covid19_tpp_gp_scripts		|184,603		|63,420,006		|n/a
+|File						|Patient count	|Record count	|Redacted records	|Date from	|Date to
+|---						|--:			|--:			|--:				|---		|---
+|covid19_emis_gp_clinical	|229,075		|254,140,571	|229,075			|1938-01-01	|2020-12-07 
+|covid19_tpp_gp_clinical	|189,559		|137,316,962	|177,297            |1938-01-01	|2020-12-05
+|covid19_emis_gp_scripts	|242,397		|79,951,610		|26,455             |1950-02-07	|2020-12-07
+|covid19_tpp_gp_scripts		|184,603		|63,420,006		|n/a                |1950-09-19	|2020-12-05
 
 ### Codes used   
 |Code type|Used in|Available from|Uploaded to|
