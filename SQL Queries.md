@@ -1,17 +1,21 @@
 # SQL Queries
 
+Will probably want to exclude all records with the following code_type:
+|coding	|meaning											|
+|---	|---                                                |
+|-99	|redacted - missing                                 |
+|-4		|redacted - incorrect READ2                         |
+|-3		|redacted - incorrect SNOMED                        |
+|-2		|redacted - rare occupation                         |
+|-1		|redacted - potentially sensitive or identifying    |
+
+
 ## Clinical (EMIS)
 
 Created a view that de-normalises the data into human readable format 
 - dbo.vw_covid19_emis_gp_clinical
 
 Need to understand how SNOMED works, and how it all fits in with what code lists already exists.
-
-|code_type	|meaning|
-|---|---|
-|2	|SNOMED CT|
-|3	|Local EMIS code|
-|5	|EMIS online test request code (OLTR)|
 
 Is as the following so far:
 ```SQL
@@ -31,7 +35,7 @@ SELECT [eid]
 		when code_type in (3, 5) then emis.meaning
 		end as code_desc
 	, case when sp_va.coding is not null
-		then sp_va.meaning 
+		then sp_va.meaning
 		else cast([value] as varchar(255)) end as [value]
 	, case when sp_un.coding is not null 
 		then sp_un.meaning
@@ -53,4 +57,7 @@ FROM [P0223].[dbo].[covid19_emis_gp_clinical] cl
 	left join (
 		select * from [tlk].[special_values] where code_set = 1176) sp_un
 		on cl.[unit] = sp_un.coding
+	/*
+	CODE LISTS GO HERE
+	*/
 ```
