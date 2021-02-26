@@ -38,7 +38,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|---|---|---|---|
 		|covid19_emis_gp_clinical|eid|Participant identifier |NA|
 		| |event_dt|Date clinical code entered|Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
-		| |code|Clinical code|SNOMED: P0223.tlk.SNOMED_Concept <br/>	P0223.tlk.SNOMED_Description <br/>EMIS Local: tlk.EMIS_clinical_codes ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|
+		| |code|Clinical code|SNOMED: tlk.SNOMED_Concept, tlk.SNOMED_Description <br/>EMIS Local: tlk.EMIS_clinical_codes ([7689](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7689))|
 		| |code_type|SNOMED or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
 		| |value|Value recorded |Special values in tlk.special_values (where code_set = [2360](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=2360))|
 		| |unit|Unit recorded for value|Special codes in tlk.special_values (where code_set = [1176](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1176))|
@@ -61,7 +61,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|---|---|---|---|
 		|covid19_emis_gp_scripts|eid |Participant identifier |NA |
 		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819))|
-		| |code |Clinical code |dm+d codes available from TRUD <br/>tlk.EMIS_prescription_codes ([7678](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7678))|
+		| |code |Clinical code |dm+d: tlk.dmdd_amp, tlk.dmdd_vmp <br/>tlk.EMIS_prescription_codes ([7678](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=7678))|
 		| |code_type |dm+d or EMIS Local code|tlk.gp_code_type ([3175](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3175))|
 - TPP 
 	- covid19_tpp_gp_scripts.txt 
@@ -70,7 +70,7 @@ N:\Faculty-of-Medicine-and-Health\LIRMM\Molecular Rheumatology\GCA Molecular dat
 		|---|---|---|---|
 		|covid19_tpp_gp_scripts |eid |Participant identifier |NA |
 		| |issue_date |Date clinical code entered |Special dates in tlk.special_values (where code_set = [819](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=819)) |
-		| |dmd_code |Clinical code |dm+d codes available from TRUD <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214)) |
+		| |dmd_code |Clinical code |dm+d: tlk.dmdd_amp, tlk.dmdd_vmp <br/>Special values in tlk.special_values (where code_set = [4214](http://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=4214)) |
 	
 ### Lookups
 - Diagnosis
