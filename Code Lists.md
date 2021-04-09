@@ -13,7 +13,57 @@ Hierarchical parent/child (destination/source) relationship between conceptIDs.
 Set of search terms for each Covariate provided by SC.  
 Used to search against all FSN & Alias descriptions to create a set of 'Parent' Concepts.  
 The 'Child' Concepts for these were found, recursing down the full chain to get all related Concepts.  
-Concepts and their FSNs were returned 
+Concepts and their FSNs were returned.  
+Sent to SC for intial review and grouping.
+- Previously approved SNOMED Concepts included and marked as such
+- Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)  
+
+<details>
+  <summary>Code to cycle through search terms of each covariate and trigger proc to recursively search for Concepts:</summary>
+  
+  ```TSQL
+  ALTER proc [dbo].[sp_create_initial_code_lists]
+  as
+
+  declare @covariate varchar(max)
+  declare @code_list_new table (
+    covariate varchar(max)
+    , code_type varchar(25)
+    , conceptId bigint
+    , term varchar(max)
+    )
+
+  declare MY_CURSOR cursor
+    LOCAL STATIC READ_ONLY FORWARD_ONLY
+  for 
+  select distinct covariate from [tlk].[code_list_search_terms] 
+
+  open MY_CURSOR
+  fetch next from MY_CURSOR into @covariate
+  while @@FETCH_STATUS = 0
+  begin 
+
+    insert into @code_list_new
+    exec [dbo].[sp_search_Child_SNOMED] @covariate
+
+    insert into [cl].[covariate_code_lists_new]
+    select n.covariate
+      , n.code_type	
+      , n.conceptId	
+      , n.term 
+    from @code_list_new n
+      left join [cl].[covariate_code_lists_approved] a
+        on n.conceptId = a.conceptId
+          and n.term = a.term
+          and a.covariate = @covariate
+    where a.conceptId is null
+
+      fetch next from MY_CURSOR into @covariate
+  end
+  close MY_CURSOR
+  deallocate MY_CURSOR
+  ```
+</details>
 <details>
   <summary>Code to generate SNOMED initial covariate code lists from search terms:</summary>
   
@@ -79,10 +129,6 @@ Concepts and their FSNs were returned
   order by c.id, d.term
   ```
 </details>
-
-Sent to SC for intial review and grouping.
-- Previously approved SNOMED Concepts included and marked as such
-- Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)
 <details>
   <summary>Code to combine previously reviewed SNOMED codes with newly searched: </summary>
 
