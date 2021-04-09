@@ -20,10 +20,9 @@ Hierarchical parent/child (destination/source) relationship between conceptIDs.
 
 <details>
   <summary>Code to cycle through each covariate and trigger proc to recursively search for Concepts:</summary>
-  I know cursors are far from performant in SQL but circumstance forced my hand. 
-  
+    
   ```TSQL
-  ALTER proc [dbo].[sp_create_initial_code_lists]
+  ALTER proc [dbo].[sp_create_initial_SNOMED_code_lists]
   as
 
   declare @covariate varchar(max)
