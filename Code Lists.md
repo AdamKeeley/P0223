@@ -7,7 +7,7 @@ There are eighteen covariates of interest, coded across four systems.
 Hierarchical parent/child (destination/source) relationship between conceptIDs.  
 - Concepts in **[tlk].[SNOMED_Concept]**, `where active = 1`.  
 - Concept descriptions defined in **[tlk].[SNOMED_Description]**, `where active = 1`.  
-  - Each Concept has many 'Alias' descriptions but supposedly a single Fully Specified Name (FSN)
+  - Each Concept has many 'Alias' descriptions but supposedly a single Fully Specified Name (FSN) `typeId = 900000000000003001`
 - Relationships between concepts defined in **[tlk].[SNOMED_Relationship]**, `where active = 1 and typeId = 116680003` ('Is a' relationship).  
 
 1. Set of search terms for each Covariate provided by SC.  
