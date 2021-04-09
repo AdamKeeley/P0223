@@ -10,16 +10,16 @@ Hierarchical parent/child (destination/source) relationship between conceptIDs.
   - Each Concept has many 'Alias' descriptions but supposedly a single Fully Specified Name (FSN)
 - Relationships between concepts defined in **[tlk].[SNOMED_Relationship]**, `where active = 1 and typeId = 116680003` ('Is a' relationship).  
 
-Set of search terms for each Covariate provided by SC.  
-Used to search against all FSN & Alias descriptions to create a set of 'Parent' Concepts.  
-The 'Child' Concepts for these were found, recursing down the full chain to get all related Concepts.  
-Concepts and their FSNs were returned.  
-Sent to SC for intial review and grouping.
-- Previously approved SNOMED Concepts included and marked as such
-- Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)  
+1. Set of search terms for each Covariate provided by SC.  
+2. Used to search against all FSN & Alias descriptions to create a set of 'Parent' Concepts.  
+3. The 'Child' Concepts for these were found, recursing down the full chain to get all related Concepts.  
+4. Concepts and their FSNs were returned.  
+5. Sent to SC for intial review and grouping.
+   - Previously approved SNOMED Concepts included and marked as such
+   - Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)  
 
 <details>
-  <summary>Code to cycle through search terms of each covariate and trigger proc to recursively search for Concepts:</summary>
+  <summary>Code to cycle through each covariate and trigger proc to recursively search for Concepts:</summary>
   
   ```TSQL
   ALTER proc [dbo].[sp_create_initial_code_lists]
@@ -65,7 +65,7 @@ Sent to SC for intial review and grouping.
   ```
 </details>
 <details>
-  <summary>Code to generate SNOMED initial covariate code lists from search terms:</summary>
+  <summary>Triggered proc that actually searches for the Concepts using the search terms:</summary>
   
   ```TSQL
   ALTER proc [dbo].[sp_search_Child_SNOMED] (@covariate varchar(max))
@@ -130,7 +130,7 @@ Sent to SC for intial review and grouping.
   ```
 </details>
 <details>
-  <summary>Code to combine previously reviewed SNOMED codes with newly searched: </summary>
+  <summary>Code to combine previously reviewed SNOMED codes with newly searched, excluding any not present in actual data: </summary>
 
   ```TSQL
   ALTER proc [dbo].[sp_combine_initial_approved_code_lists]
