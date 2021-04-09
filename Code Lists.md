@@ -81,15 +81,22 @@ Concepts and their FSNs were returned and sent to SC for intial review and group
     and c.id in (select conceptId from @child union all select conceptId from @core)
   order by c.id, d.term
   ```
-</details>
+</details>  
 
 ### CTV3
-Hierarchical parent/child relationship between concepts. Need to perform similar to SNOMED above.
+Hierarchical parent/child relationship between concepts. Need to perform similar to SNOMED above.  
 
 ### EMIS Local
-Non hierarchical, term search and review should suffice.
+Non hierarchical, term search and review should suffice.  
 
 ### TPP Local
-Non hierarchical, term search and review should suffice.
+Non hierarchical, term search and review should suffice.  
 
 ## Medications
+
+### dm+d
+Used in both EMIS & TPP prescription files.  
+
+### EMIS Local
+Used in EMIS prescription file.  
+Non-hierarchical, term search and review should suffice.
