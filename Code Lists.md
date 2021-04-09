@@ -13,12 +13,9 @@ Hierarchical parent/child (destination/source) relationship between conceptIDs.
 Set of search terms for each Covariate provided by SC.  
 Used to search against all FSN & Alias descriptions to create a set of 'Parent' Concepts.  
 The 'Child' Concepts for these were found, recursing down the full chain to get all related Concepts.  
-Concepts and their FSNs were returned and sent to SC for intial review and grouping.
-- Previously approved SNOMED Concepts included and marked as such
-- Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)
-
+Concepts and their FSNs were returned 
 <details>
-  <summary>Code to generate SNOMED covariate code lists: </summary>
+  <summary>Code to generate SNOMED initial covariate code lists from search terms:</summary>
   
   ```TSQL
   ALTER proc [dbo].[sp_search_Child_SNOMED] (@covariate varchar(max))
@@ -81,7 +78,44 @@ Concepts and their FSNs were returned and sent to SC for intial review and group
     and c.id in (select conceptId from @child union all select conceptId from @core)
   order by c.id, d.term
   ```
-</details>  
+</details>
+
+Sent to SC for intial review and grouping.
+- Previously approved SNOMED Concepts included and marked as such
+- Any Concepts not included in the data excluded from review (reducing reviewable code count from >86k to <17k)
+<details>
+  <summary>Code to combine previously reviewed SNOMED codes with newly searched: </summary>
+
+  ```TSQL
+  ALTER proc [dbo].[sp_combine_initial_approved_code_lists]
+  as
+
+  declare @t table (code bigint)
+  insert into @t 
+
+  SELECT distinct [code] 
+  FROM [P0223].[dbo].[covid19_emis_gp_clinical] 
+  where code_type = 2
+
+  select [code_type]
+    , [covariate]
+    , [grouping]
+    , [conceptId]
+    , [term]
+    , 'Approved & Grouped' as CodeStatus
+  from [cl].[covariate_code_lists_approved] a
+  where conceptId in (select code from @t)
+    union 
+  select [code_type]
+    , [covariate]
+    , null as [Grouping]
+    , [conceptId]
+    , [term]
+    , 'New & ungrouped' as CodeStatus
+  from [cl].[covariate_code_lists_new] n
+  where conceptId in (select code from @t)
+  ```
+</details>
 
 ### CTV3
 Hierarchical parent/child relationship between concepts. Need to perform similar to SNOMED above.  
