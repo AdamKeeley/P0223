@@ -138,7 +138,6 @@ Hierarchical parent/child (destination/source) relationship between conceptIDs.
 
   declare @t table (code bigint)
   insert into @t 
-
   SELECT distinct [code] 
   FROM [P0223].[dbo].[covid19_emis_gp_clinical] 
   where code_type = 2
